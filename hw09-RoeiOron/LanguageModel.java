@@ -123,13 +123,14 @@ public class LanguageModel {
 		int windowLength = Integer.parseInt(args[0]);
         String initialText = args[1];
         int textLength = Integer.parseInt(args[2]);
-        boolean random = args[3].equals("random");
+        String seedStr = args[3];
         String fileName = args[4];
         LanguageModel lm;
-        if (random) {
+        if (seedStr.equals("random")) {
             lm = new LanguageModel(windowLength);
         } else {
-            lm = new LanguageModel(windowLength, 20); 
+            int seed = Integer.parseInt(seedStr);
+            lm = new LanguageModel(windowLength, seed);
         }
         lm.train(fileName);
         System.out.println(lm.generate(initialText, textLength));
