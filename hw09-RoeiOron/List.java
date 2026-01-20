@@ -77,9 +77,9 @@ public class List {
             CharData data = get(index);
             data.count++;
         } else {
-        addFirst(chr);
+            addFirst(chr);
+        }
     }
-}
 
     /** GIVE If the given character exists in one of the CharData objects
      *  in this list, removes this CharData object from the list and returns
@@ -88,16 +88,15 @@ public class List {
         if(first == null){
             return false;
         }
-        if(first.cp.equals(chr)){
+        if(first.cp.chr == chr){
             first = first.next;
             size--;
             return true;
         }
         Node prev = first;
         Node current = first.next;
-        ListIterator it = listIterator(0);    
         while (current != null) {
-            if (current.cp.equals(chr)) {
+            if (current.cp.chr == chr) {
                 prev.next = current.next;
                 size--; 
                 return true;
@@ -106,7 +105,7 @@ public class List {
             current = current.next;
         }
         return false;
-        }   
+    }   
 
     /** Returns the CharData object at the specified index in this list. 
      *  If the index is negative or is greater than the size of this list, 
