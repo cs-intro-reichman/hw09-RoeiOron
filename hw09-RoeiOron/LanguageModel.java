@@ -95,14 +95,11 @@ public class LanguageModel {
         }
         String generatedText = initialText;
         String window = initialText.substring(initialText.length() - windowLength);
-        
-        // textLength is the number of ADDITIONAL characters to generate after initialText
-        int targetLength = initialText.length() + textLength;
 
-        while (generatedText.length() < targetLength) {
+        while (generatedText.length() < textLength) {
             List probs = CharDataMap.get(window);
             if (probs != null) {
-                char nextChar = getRandomChar(probs);
+                char nextChar = getRandomChar(probs); // Use your random dice roll
                 generatedText += nextChar;
 	            window = generatedText.substring(generatedText.length() - windowLength);
             } else {

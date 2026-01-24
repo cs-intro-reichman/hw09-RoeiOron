@@ -42,16 +42,13 @@ public class List {
     /** GIVE Textual representation of this list. */
     public String toString() {
         if (size == 0) return "()";
-            String str = "(";
-            Node current = first;
-        while (current != null) {
-            str += current.cp.toString(); 
-            if (current.next != null) {
-                str += " "; 
-            }
-            current = current.next;
+        String str = "(";
+        ListIterator it = listIterator(0); 
+        while (it.hasNext()) {
+            CharData current = it.next(); 
+            str = str + current.toString() + " ";
         }
-    return str + ")";
+        return str.substring(0, str.length() -1) + ")";
     }
 
     /** Returns the index of the first CharData object in this list
@@ -135,10 +132,12 @@ public class List {
 
     /** Returns an iterator over the elements in this list, starting at the given index. */
     public ListIterator listIterator(int index) {
+	    // If the list is empty, there is nothing to iterate   
+	    if (size == 0) return null;
 	    // Gets the element in position index of this list
 	    Node current = first;
 	    int i = 0;
-        while (i < index && current != null) {
+        while (i < index) {
             current = current.next;
             i++;
         }

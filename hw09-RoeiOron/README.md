@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-=======
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/P8di0GmZ)
 # Homework 9: Text Generation
 
@@ -45,4 +25,3 @@ Implement a text generation program using a Markov chain language model. The pro
 - Full assignment instructions: `HW9.pdf`
 - Test files: `shakespeareinlove.txt`, `originofspecies.txt`
 - Helper classes (already complete): `CharData.java`, `Node.java`, `ListIterator.java`, `In.java`
->>>>>>> 2310b4a656713b3acb9c71b88e519b2763ca3160
